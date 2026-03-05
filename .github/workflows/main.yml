@@ -17,14 +17,14 @@ jobs:
       bf_suite: ome-zarr-bf2raw-suite
       zarr_suite: ome-zarr-py-suite
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - name: Setup miniconda
-        uses: conda-incubator/setup-miniconda@v2
+        uses: conda-incubator/setup-miniconda@v3
         with:
           auto-update-conda: true
           channels: conda-forge,ome
           environment-file: environment.yml
-          python-version: 3.9
+          python-version: 3.12
       - name: Set testing environment
         if: github.event.action == 'run_test_suite'
         shell: bash

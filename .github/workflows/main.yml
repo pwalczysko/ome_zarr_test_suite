@@ -17,7 +17,7 @@ jobs:
       bf_suite: ome-zarr-bf2raw-suite
       zarr_suite: ome-zarr-py-suite
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v4
       - name: Setup miniconda
         uses: conda-incubator/setup-miniconda@v3
         with:
